@@ -6,25 +6,26 @@ body
 
 .title
 {
-    background: url(images/decorations/header_back.jpg);
+    background-image: url(images/decorations/header_back.jpg);
+    background-size: 100% 100%;
     position: relative;
     top: -55px;
     height: 300px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-size: 40px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
     text-align: center;
 }
 
-.main_content
+.main-content
 {
     min-width: 900px;
-    background: radial-gradient(rgb(255, 255, 255), rgb(85, 85, 85));
+    background: radial-gradient(#fff, #555);
     text-align: center;
     width: auto;
     padding: 50px;
     margin: 100px 100px 50px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid #000;
 }
 
 input[id='layout']
@@ -39,27 +40,32 @@ input[id='layout']:checked ~ label[for='layout']
 
 label[for='layout']
 {
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 255, 255);
+    color: #fff;
+    border: 1px solid #fff;
     font-size: 40px;
+    line-height: 50px;
     width: 50px;
     height: 50px;
     display: block;
     padding: 0;
     margin-bottom: 50px;
+    
     cursor: pointer;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 input[id='layout']:checked ~ .photocard
 {
-    max-width: 900px;
+    min-width: 700px;
+    max-width: 50vw;
     display: block;
 }
 
 .photocard
 {
-    background-color: rgb(255, 255, 255);
-    vertical-align: middle;
+    background-color: #fff;
     display: inline-block;
     padding: 30px 30px 0;
     margin: 0 auto 10px;
@@ -68,10 +74,10 @@ input[id='layout']:checked ~ .photocard
 
 .photocard:hover
 {
-    box-shadow: 3px 2px 5px 2px rgb(0, 0, 0);
+    box-shadow: 3px 2px 5px 2px #00000026;
 }
 
-input[id='layout']:not(:checked) ~ .photocard img[src$='cat.jpg']
+input[id='layout'] ~ .photocard img[src$='cat.jpg']
 {
     width: 400px;
     height: 300px;
@@ -85,65 +91,65 @@ input[id='layout']:checked ~ .photocard img[src$='cat.jpg']
 
 .photocard img[src$='cat.jpg']:hover
 {
-    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    box-shadow: 1px 1px 1px 1px #000;
     transform: scale(1.1, 1.1);
 }
 
-.info_about_cat
+.info-about-cat
 {
     text-align: left;
     overflow: ellipsis;
-    vertical-align: bottom;
     margin-top: 10px;
 }
 
-input[id='layout']:checked ~ .photocard .info_about_cat
+input[id='layout']:checked ~ .photocard .info-about-cat
 {
-    margin-left: 150px;
+    margin: 10px auto;
     font-size: 20px;
     width: 600px;
 }
 
-.name_of_cat
+.name-of-cat
 {
     text-decoration-line: none;
     font-weight: bold;
     font-size: 34px;
 }
 
-.name_of_cat:visited
+.name-of-cat:link,
+.name-of-cat:visited
 {
-    color: rgb(0, 0, 0);
+    color: #000;
 }
 
-.name_of_cat:hover
+.name-of-cat:hover
 {
-    color: rgb(0, 128, 0);
+    color: #008000;
 }
 
-input[id='layout']:checked ~ .photocard .name_of_cat
+input[id='layout']:checked ~ .photocard .name-of-cat
 {
     font-size: 40px;
 }
 
-.describe_of_cat
+.describe-of-cat
 {
-    color: rgb(128, 128, 128);
+    color: #808080;
 }
 
-.info_about_cat span
+.info-about-cat span
 {
-    color: rgb(0, 0, 0);
+    color: #000;
     font-weight: bold;
 }
 
-.additional_info
+.additional-info
 {
-    color: rgb(128, 128, 128);
+    color: #808080;
     margin-bottom: 50px;
 }
 
-input[id='layout']:not(:checked) ~ .photocard .additional_info
+input[id='layout']:not(:checked) ~ .photocard .additional-info
 {
     display: none;
 }
@@ -156,9 +162,10 @@ input[id='layout']:not(:checked) ~ .photocard .additional_info
     padding-bottom: 20px;
 }
 
-.footer_content img
+.footer-content__image
 {
-    margin-bottom: -5px;
     width: 100%;
-    height: 100%;
+    height: 300px;
+    background-image: url(images/decorations/footer_cat.jpg);
+    background-size: 100% 100%;
 }
